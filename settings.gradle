@@ -1,0 +1,4 @@
+rootProject.name = 'ui-monorepo'
+
+include 'app'
+include 'components'

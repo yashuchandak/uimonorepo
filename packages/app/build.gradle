@@ -1,0 +1,22 @@
+rootProject.name = 'ui-monorepo'
+
+include 'packages/app'
+include 'packages/components'
+
+project(':app') {
+    apply plugin: 'java'
+
+    dependencies {
+        implementation project(':components')
+        implementation 'org.webjars.npm:react:18.2.0'
+        implementation 'org.webjars.npm:react-dom:18.2.0'
+    }
+}
+
+project(':components') {
+    apply plugin: 'java'
+
+    dependencies {
+        implementation 'org.webjars.npm:react:18.2.0'
+    }
+}
